@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT */
+@font-face {
+  font-family: IRANRounded;
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/font/fonts/eot/IRAN-Rounded.eot");
+  src: url("./assets/font/fonts/eot/IRAN-Rounded.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("./assets/font/fonts/woff/IRAN-Rounded.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("./assets/font/fonts/ttf/IRAN Rounded.ttf") format("truetype");
+}
+/*    FOR PERSIAN FONTS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+a,
+p,
+div {
+  font-family: IRANRounded !important;
+}
+
+* {
+  direction: rtl;
+}
+
+.input-primary-theme {
+  @apply text-primary-dark placeholder-primary-light focus:outline-1 focus:outline-primary-dark autofill:bg-primary-light;
+}
+
+.btn-primary-theme {
+  @apply text-primary-dark border-normal border-primary-dark hover:bg-primary-dark hover:text-primary-light;
+}
+
+.btn-primary-active {
+  @apply text-primary-light border-primary-light bg-primary-dark;
+}
+
+.btn-cancel {
+  @apply text-error border-normal border-error hover:bg-error hover:text-primary-dark;
+}
+
+/* dropdown multi select styles */
+.rmsc {
+  --rmsc-main: #008148 !important;
+  --rmsc-bg: #034732 !important;
+  --rmsc-hover: #008148 !important;
+  --rmsc-selected: #008148 !important;
+  --rmsc-gray: #b5dda4 !important;
+  --rmsc-radius: 8px !important;
+  --rmsc-h: 3rem !important;
+}
+
+.dropdown-content div * {
+  margin-right: 3px;
+}
+
