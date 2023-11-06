@@ -2,10 +2,13 @@ import { useState } from "react";
 import homeIcon from "../assets/images/icon.png";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const [menuState, setMenuState] = useState(false);
   const [showVorood, setShowVorood] = useState(true);
+  const {t} = useTranslation();
+  
   function handleMenu() {
     setMenuState(!menuState);
     setShowVorood(!showVorood)
@@ -26,7 +29,7 @@ export default function Header() {
           </div>
         </div>
         <Link to={"/auth"} className={`${styles.vorood} ${showVorood ? '' : styles.disNon}`}>
-          ورود
+          {t('header-signIn')}
         </Link>
       </div>
       <div className={styles["home-link"]}>
@@ -46,7 +49,7 @@ export default function Header() {
           }`}
           onClick={handleMenu}
         >
-          خانه
+          {t('header-home')}
         </Link>
         <Link
           to={"/auth"}
@@ -55,7 +58,7 @@ export default function Header() {
           }`}
           onClick={handleMenu}
         >
-          ثبت نام / ورود
+          {t('header-signUpOrLogIn')}
         </Link>
         <Link
           to={"/about"}
@@ -64,7 +67,7 @@ export default function Header() {
           }`}
           onClick={handleMenu}
         >
-          یوگا با محدثه
+          {t('header-yogaWithMohadese')}
         </Link>
         <Link
           to={"/ticket"}
@@ -73,7 +76,7 @@ export default function Header() {
           }`}
           onClick={handleMenu}
         >
-          ثبت درخواست
+          {t('header-submitRequest')}
         </Link>
         <Link
           to={"/terms"}
@@ -82,7 +85,7 @@ export default function Header() {
           }`}
           onClick={handleMenu}
         >
-          قوانین
+          {t('header-terms')}
         </Link>
         <Link
           to={"/contact"}
@@ -91,7 +94,7 @@ export default function Header() {
           }`}
           onClick={handleMenu}
         >
-          ارتباط با ما
+          {t('header-contactUs')}
         </Link>
       </div>
     </div>
