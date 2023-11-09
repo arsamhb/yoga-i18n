@@ -13,18 +13,6 @@
 }
 
 /* HAMBURGER MENU */
-.voroodBurgerContainer{
-    z-index: 1000;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    gap: 100px;
-}
-
-.box {
-    background: transparent;
-    z-index: 1000;
-}
 
 .navBtn {
     position: absolute;
@@ -86,7 +74,7 @@
     color: #034732;
     font-size: 20px;
     z-index: 1;
-    
+    margin-right: 4rem ;
     padding: 0.8rem 1rem 0.5rem 1rem;
     border-radius: 5%;
     display: flex;

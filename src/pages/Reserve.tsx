@@ -1,8 +1,10 @@
 import styles from "./styles/Reserve.module.css";
 import Header from "../components/Header";
 import { SetStateAction, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Reserve() {
+  const { t } = useTranslation();
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbxlsmny036LQVKVs_tW6NyRsygUWLTt3CnGbZeV9sixbSR3IXB8N6gTfHs6TEByjoXE/exec";
 
@@ -39,7 +41,6 @@ export default function Reserve() {
 
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
-
           setErrMsg("اطلاعات شما ثبت شد. در اولین فرصت به شما پیام میدهیم.");
           setTimeout(function () {
             setErrMsg("");
