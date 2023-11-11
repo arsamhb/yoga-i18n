@@ -70,7 +70,6 @@ export default function About() {
         >
           {t("pagesAbout01")}
         </Link>{" "}
-        {/* DOROOD BE SHARAFET ABDOLI */}
       </div>
       {/* FAQ */}
       <div className={`w-full ${styles.customBG}`}>
